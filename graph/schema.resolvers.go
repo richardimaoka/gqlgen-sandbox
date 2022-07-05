@@ -21,6 +21,11 @@ func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
+// Something is the resolver for the something field.
+func (r *queryResolver) Something(ctx context.Context) (*string, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
 // Mutation returns generated.MutationResolver implementation.
 func (r *Resolver) Mutation() generated.MutationResolver { return &mutationResolver{r} }
 
