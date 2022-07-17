@@ -1,3 +1,3 @@
 FROM postgres:10.7
-WORKDIR ./
+WORKDIR /
 COPY init /docker-entrypoint-initdb.d/

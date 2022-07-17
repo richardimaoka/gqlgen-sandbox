@@ -1,3 +1,47 @@
+create table company
+(
+    company_cd integer not null,
+    rr_cd integer not null,
+    company_name varchar not null,
+    company_name_k varchar,
+    company_name_h varchar,
+    company_name_r varchar,
+    company_url varchar,
+    company_type integer,
+    e_status integer,
+    e_sort integer,
+    PRIMARY KEY (company_cd)
+);
+comment on table company is 'company20220401.csv';
+
+create table joins
+(
+    line_cd integer not null,
+    station_cd1 integer not null,
+    station_cd2 integer not null,
+    PRIMARY KEY (line_cd,station_cd1,station_cd2)
+);
+comment on table joins is 'join20220413.csv';
+
+create table line
+(
+    line_cd integer not null,
+    company_cd integer not null,
+    line_name varchar not null,
+    line_name_k varchar,
+    line_name_h varchar,
+    line_color_c varchar,
+    line_color_t varchar,
+    line_type varchar,
+    lon float,
+    lat float,
+    zoom integer,
+    e_status integer,
+    e_sort integer,
+    PRIMARY KEY (line_cd)
+);
+comment on table line is 'line20220323free.csv';
+
 create table station
 (
     station_cd integer not null,
@@ -17,4 +61,4 @@ create table station
     e_sort integer,
     PRIMARY KEY (station_cd)
 );
-comment on table station is 'station20200316free.csv';
+comment on table station is 'station20220425free.csv';
