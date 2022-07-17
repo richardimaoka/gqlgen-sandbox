@@ -11,21 +11,17 @@ import (
 	"github.com/richardimaoka/gqlgen-sandbox/graph/model"
 )
 
-// CreateTodo is the resolver for the createTodo field.
-func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) (*model.Todo, error) {
+// StationByCd is the resolver for the stationByCD field.
+func (r *queryResolver) StationByCd(ctx context.Context, stationCd *int) (*model.Station, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
-// Todos is the resolver for the todos field.
-func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
+// StationByName is the resolver for the stationByName field.
+func (r *queryResolver) StationByName(ctx context.Context, stationName *string) ([]*model.Station, error) {
 	panic(fmt.Errorf("not implemented"))
 }
-
-// Mutation returns generated.MutationResolver implementation.
-func (r *Resolver) Mutation() generated.MutationResolver { return &mutationResolver{r} }
 
 // Query returns generated.QueryResolver implementation.
 func (r *Resolver) Query() generated.QueryResolver { return &queryResolver{r} }
 
-type mutationResolver struct{ *Resolver }
 type queryResolver struct{ *Resolver }
