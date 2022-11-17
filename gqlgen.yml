@@ -1,6 +1,6 @@
 models:
   Todo:
-    model: github.com/99designs/gqlgen/_examples/todo.Todo
+    model: github.com/richardimaoka/gqlgen-sandbox.Todo
   ID:
     model: # override the default id marshaller to use ints
       - github.com/99designs/gqlgen/graphql.IntID
